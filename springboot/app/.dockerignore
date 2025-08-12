@@ -1,7 +1,2 @@
-target/
-.git
-.gitignore
+target
 *.md
-.idea
-.vscode
-.DS_Store
