@@ -1,2 +1,6 @@
 [build]
-root = "springboot/app"
+builder = "paketobuildpacks/builder:base"
+buildCommand = "cd springboot/app && ./mvnw package -DskipTests"
+
+[deploy]
+startCommand = "java -jar springboot/app/target/app-0.0.1-SNAPSHOT.jar"
