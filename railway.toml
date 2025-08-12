@@ -1,6 +1,5 @@
 [build]
-builder = "paketobuildpacks/builder:base"
-buildCommand = "cd springboot/app && ./mvnw package -DskipTests"
+command = "cd springboot/app && ./mvnw package -DskipTests"
 
 [deploy]
-startCommand = "java -jar springboot/app/target/app-0.0.1-SNAPSHOT.jar"
+command = "java -jar springboot/app/target/app-0.0.1-SNAPSHOT.jar"
