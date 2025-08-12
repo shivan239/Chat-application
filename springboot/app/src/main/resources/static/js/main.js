@@ -23,23 +23,24 @@ var colors = [
 function connect(event) {
     username = document.querySelector('#name').value.trim();
 
-    if(username) {
+    if (username) {
         usernamePage.classList.add('hidden');
         chatPage.classList.remove('hidden');
 
-        // Build WebSocket URL dynamically
-        var loc = window.location;
-        var socketUrl = loc.protocol === "https:" 
-            ? `https://${loc.host}/ws` 
-            : `http://${loc.host}/ws`;
+        // Dynamically match protocol + host
+        var socketUrl = window.location.origin + '/ws';
 
         var socket = new SockJS(socketUrl);
         stompClient = Stomp.over(socket);
+
+        // Optional: disable STOMP debug logs in console
+        stompClient.debug = null;
 
         stompClient.connect({}, onConnected, onError);
     }
     event.preventDefault();
 }
+
 
 // Function to handle a successful connection
 function onConnected() {
@@ -130,3 +131,4 @@ function getAvatarColor(messageSender) {
 // Add event listeners to the forms
 usernameForm.addEventListener('submit', connect, true);
 messageForm.addEventListener('submit', sendMessage, true);
+
