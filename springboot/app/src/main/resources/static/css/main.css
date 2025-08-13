@@ -18,16 +18,20 @@
 }
 
 /* Global body styles and animated background */
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* Prevent body from scrolling */
+}
+
 body {
     font-family: var(--font-family);
     background: linear-gradient(135deg, var(--background-start), var(--background-end));
     background-size: 400% 400%;
     animation: gradient-animation 15s ease infinite;
-    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     color: var(--text-color);
     line-height: 1.6;
 }
@@ -132,15 +136,21 @@ body {
 
 /* Styling for the main chat page container */
 #chat-page {
-    width: 95%;
+    width: 100%;
     max-width: 900px;
-    height: 90vh;
+    height: 100vh; /* Fill the full viewport height */
     display: flex;
     flex-direction: column;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 20px 40px var(--shadow-color);
     background: var(--card-background);
+}
+
+.chat-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .chat-header {
@@ -175,7 +185,7 @@ body {
     margin: 0;
     padding: 1.5rem;
     flex-grow: 1;
-    overflow-y: auto;
+    overflow-y: auto; /* This is the key fix for scrolling messages */
     background-color: #F8F9FA;
 }
 
@@ -280,11 +290,8 @@ body {
 
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
-    body {
-        padding: 1rem;
-    }
     #chat-page {
-        height: 95vh;
+        height: 100vh;
     }
     .title {
         font-size: 1.5rem;
