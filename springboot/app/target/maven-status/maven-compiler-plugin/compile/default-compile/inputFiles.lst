@@ -1,6 +1,6 @@
-H:\Desktop\springboot\app\src\main\java\com\chat\app\app\ChatController.java
-H:\Desktop\springboot\app\src\main\java\com\chat\app\app\ChatMessage.java
-H:\Desktop\springboot\app\src\main\java\com\chat\app\app\MessageType.java
-H:\Desktop\springboot\app\src\main\java\com\chat\app\AppApplication.java
-H:\Desktop\springboot\app\src\main\java\com\chat\app\config\WebSocketConfig.java
-H:\Desktop\springboot\app\src\main\java\com\chat\app\config\WebSocketEventListener.java
+/workspaces/Chat-application/springboot/app/src/main/java/com/chat/app/AppApplication.java
+/workspaces/Chat-application/springboot/app/src/main/java/com/chat/app/app/ChatController.java
+/workspaces/Chat-application/springboot/app/src/main/java/com/chat/app/app/ChatMessage.java
+/workspaces/Chat-application/springboot/app/src/main/java/com/chat/app/app/MessageType.java
+/workspaces/Chat-application/springboot/app/src/main/java/com/chat/app/config/WebSocketConfig.java
+/workspaces/Chat-application/springboot/app/src/main/java/com/chat/app/config/WebSocketEventListener.java
